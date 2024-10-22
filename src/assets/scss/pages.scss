@@ -1,0 +1,170 @@
+.policies-container-parent,
+.product-container-parent {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+
+  .policies-container,
+  .product-container {
+    width: 70%;
+
+    .policies-section1,
+    .product-section1 {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+
+      .logo-wrapper {
+        width: 36px;
+        height: 36px;
+        background: #3b82f6;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 10px;
+      }
+      .page-title {
+        color: #2d2f31;
+        font-size: 32px;
+        font-weight: 400;
+      }
+    }
+
+    .policies-section2,
+    .product-section2 {
+      margin-top: 15px;
+      display: flex;
+      padding: 12px 0;
+      align-items: center;
+      gap: 12px;
+      position: relative; // Ensure this is set to relative
+      height: 50px;
+
+      img {
+        height: 20px;
+        width: 18px;
+        
+      }
+      span {
+        color: #202223;
+        font-size: 20px;
+        font-weight: 600;
+      }
+
+      &::after {
+        content: ""; // Empty content for the pseudo-element
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 0; // Pseudo-element ko section ke bottom par set kiya
+        height: 1px; // Height of the border line
+        background: linear-gradient(
+          to right,
+          rgba(235, 0, 255, 1) 50%,
+          rgba(59, 130, 246, 1) 50%
+        ); // Linear gradient
+        // z-index: 1; // Z-index to place it above the background
+      }
+    }
+
+    .policies-section3,
+    .product-section3 {
+      margin-top: 10px;
+      display: flex;
+      justify-content: space-between;
+
+      span {
+        font-size: 14px;
+        font-weight: 400;
+        color: #2d2f31;
+      }
+    }
+
+    .policies-section4,
+    .product-section4 {
+      margin-top: 10px;
+
+      table {
+        width: 100%;
+        border-collapse: separate; /* Gaps ke liye border-collapse ko separate kiya */
+        border-spacing: 0 10px; /* Rows ke beech mein 10px ka gap diya */
+
+        thead {
+          tr {
+            th {
+              font-size: 14px;
+              color: #2d2f31;
+              font-weight: 500 !important;
+              text-align: left;
+            }
+            .th-view-text {
+              text-align: right; /* View column text ko right align kiya */
+            }
+          }
+        }
+
+        tbody {
+          tr {
+            /* Removed border and overflow to apply it to the inner div */
+            background-color: #fff;
+          }
+
+          .td-name-col,
+          .td-view-col {
+            padding: 10px 0;
+            display: flex;
+            align-items: center;
+          }
+
+          .td-name-col {
+            gap: 10px;
+
+            .icon {
+              width: 36px;
+              height: 36px;
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              padding: 6px;
+              box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.25);
+              background-color: white;
+              border-radius: 50%;
+
+              img{
+                height: 20px;
+                width: 20px;
+                filter: brightness(0) saturate(100%) invert(43%) sepia(60%) saturate(4064%) hue-rotate(200deg) brightness(100%) contrast(97%);
+
+
+              }
+            }
+            span {
+              font-size: 16px;
+              font-weight: 600;
+              color: #212121;
+            }
+          }
+
+          .td-view-col {
+            text-align: right; /* View column ko right align kiya */
+          }
+
+          .row-wrapper {
+            border: 1px solid #dee1e6;
+            border-radius: 8px;
+            overflow: hidden;
+            background-color: #fff;
+            margin-bottom: 10px;
+            box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.1);
+
+            .td-row-parent {
+              display: flex;
+              justify-content: space-between;
+              padding: 0px 12px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
